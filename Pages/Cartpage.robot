@@ -27,7 +27,7 @@ ClickProductMenu
 
 ValidateCartPage
     [Arguments]     ${Expected_CartPage_text}
-    ${Actual_shopping_Cart_Text}    Get Text    //a[@href='/view_cart']/u
+    ${Actual_shopping_Cart_Text}    Get Text    //div[@class='breadcrumbs']//ol//li[text()='Shopping Cart']
     Should Be Equal As Strings    ${Actual_shopping_Cart_Text}     ${Expected_CartPage_text}
 
 RemoveProductAndVerifyProductIsRemoved

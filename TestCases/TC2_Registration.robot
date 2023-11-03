@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    logging
 Resource    ../Resources/common.robot
 Resource    ../Pages/AccountPage.robot
 Test Template    RegistrationTest
@@ -11,22 +12,25 @@ Resource    ../Pages/RegistrationPage.robot
 
 
 *** Test Cases ***
-UserRegistration      Emy    Emy38@gmail.com         Emy@AE10   2  1  2015   Eminem  rap  TheEm  louisStreet  Canada   vegas   downtown  3001001  0123456789  ACCOUNT CREATED!  Logged in as Emy
+UserRegistration      Emy    Emy100@gmail.com         Emy@AE10   2  1  2015   Eminem  rap  TheEm  louisStre et  Canada   vegas   downtown  3001001  0123456789  ACCOUNT CREATED!  Logged in as Emy
         
 
-  
+
 
 
 *** Keywords ***
 RegistrationTest
 
-    [Arguments]   ${Get_signup_name}  ${Get_ssignup_email}     ${Password}  ${Day}  ${month}  ${year}  ${firstName_Address}  ${lastname_Address}  ${comp_name}  ${address}  ${contry}  ${state}  ${city}  ${zip}  ${mobnumber}  ${validateAccntCreatedTxt}  ${Logged_User_Text} 
+    [Arguments]   ${Get_signup_name}  ${Get_ssignup_email}     ${Password}  ${Day}  ${month}  ${year}  ${firstName_Address}  ${lastname_Address}  ${comp_name}  ${address}  ${contry}  ${state}  ${city}  ${zip}  ${mobnumber}  ${validateAccntCreatedTxt}  ${Logged_User_Text}
+    [Tags]    test:retry(2) 
 
     ClickLogin
 
     EnterSignUpName     ${Get_signup_name}
 
     EnterSignUpEmail    ${Get_ssignup_email}
+
+  
 
     SignUpButton
 

@@ -5,7 +5,9 @@ Library    SeleniumLibrary
 
 *** Variables ***
 
-${BROWSER}    edge
+${BROWSER}     edge
+
+${URL}      https://www.automationexercise.com/
 # ${AD_BLOCKER_DIR}    
 ${LOGIN_ERROR_TEXT}    Your email or password is incorrect!
 

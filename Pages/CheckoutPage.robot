@@ -27,7 +27,7 @@ VerifyAddress
 
     
 
-    FOR  ${index}  IN  RANGE    1  @{Del_Addess}
+    FOR  ${index}  IN  \[RANGE]    1  @{Del_Addess}
         ${element1}    Set Variable    @{Del_Addess}[${index}]
         ${element2}    Set Variable  @{Bill_Address}[${index}]
         Run Keyword If  '${element1.text}'  == '${element2.text}'

@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Resource    ../configuration/config.robot
 Resource    ../Pages/HomePage.robot
+Resource    ../Utilities/CommonMethods.robot
 
 *** Variables ***
 ${LOGIN_EMAIL_TEXTFIELD}        //input[@data-qa='login-email']   
@@ -18,37 +19,42 @@ ${SIGNUP_BUTTON}   //button[text()='Signup']
 
 
 
+
+
 *** Keywords ***
 
 
 ClickLogin
-    Click Element    ${LOGIN_LINKTEXT}
+
+    Myclick    ${LOGIN_LINKTEXT}     ${LOGIN_LINKTEXT}
+    # Click Element    ${LOGIN_LINKTEXT}
     Log To Console    login element clicked
 
 EnterLoginEmail
 
     [Arguments]    ${loginuseremail}
-    Input Text     ${LOGIN_EMAIL_TEXTFIELD}     ${loginuseremail} 
+    PutText    ${LOGIN_EMAIL_TEXTFIELD}    ${loginuseremail}
+    # Input Text     ${LOGIN_EMAIL_TEXTFIELD}     ${loginuseremail} 
     Log To Console    login Email entered
 
 EnterLoginPassword
 
     [Arguments]    ${loginPassword}
-    Input Text    ${Login_PASSWORD_TEXTFIELD}              ${loginPassword}
+    PutText    ${Login_PASSWORD_TEXTFIELD}              ${loginPassword}
+    # Input Text    ${Login_PASSWORD_TEXTFIELD}              ${loginPassword}
     Log To Console    login password entered
 
 ClickLoginButton
 
-    Click Element    ${LOGIN_BUTTON}
+    Myclick    ${LOGIN_BUTTON}    ${LOGIN_BUTTON}
+    # Click Element    ${LOGIN_BUTTON}
     Log To Console    login button clicked
 
 ValidateLoginError
 
-    [Arguments]    ${ERROR_MESSAGE}
-    Wait Until Element Is Visible    ${LOGIN_ERROR_MESSAGE}
-    Element Text Should Be    ${LOGIN_ERROR_MESSAGE}      ${ERROR_MESSAGE}
-    Log To Console    login error validated
+     [Arguments]    ${ERROR_MESSAGE}
 
+    ValidateText    ${ERROR_MESSAGE}
 
 EnterSignUpName
 

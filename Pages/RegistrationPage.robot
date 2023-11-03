@@ -4,6 +4,8 @@ Resource    ../Pages/HomePage.robot
 Resource    ../Pages/AccountPage.robot
 
 
+
+
 *** Variables ***
 ${TITLE_RADIO_BUTTON}        //div[@id='uniform-id_gender1']
 ${NAME_TEXTFIELD}      id:name

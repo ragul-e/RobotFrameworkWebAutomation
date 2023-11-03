@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+
 Resource    ../Resources/common.robot   
 Resource    ../Pages/loginPage.robot
 Resource    ../configuration/config.robot
@@ -29,4 +30,5 @@ LoginTestWithInvalidData
     ClickLoginButton    
    
     ValidateLoginError    ${ERRORMESSAGE}
- 
+    
+        

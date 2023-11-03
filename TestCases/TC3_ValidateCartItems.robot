@@ -5,7 +5,7 @@ Resource    ../Pages/HomePage.robot
 Resource    ../Pages/Cartpage.robot
 Resource    ../Pages/Productpage.robot
 Suite Setup    InvokeBrowser
-Suite Teardown    Close Browser
+# Suite Teardown    Close Browser
 Test Template    ValidateAddressDetailsInAddressPage
 
 
@@ -13,14 +13,7 @@ Test Template    ValidateAddressDetailsInAddressPage
 
 
 ValidateAddressDetails    Automation Exercise    RECOMMENDED ITEMS    Shopping Cart
-    [Tags]    test:retry(3)
-
-
-
-
-
-
-
+    [Tags]    test:retry(2)
 
 
 

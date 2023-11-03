@@ -5,10 +5,11 @@ Resource    ../configuration/config.robot
 
 
 *** Variables ***
-${URL}      https://www.automationexercise.com/
-${EXTENSION_PATH}     Adblocker\odfafepnkmbhccpbejgmiehpchacaeak.crx
+
+${EXTENSION_PATH}     C:\Program Files (x86)\Microsoft\Edge\Application\118.0.2088.69\Extensions
 
 # options=add_argument("--load-extension= ${EXTENSION_PATH}")
+# add_argument("--headless")
 
 
 

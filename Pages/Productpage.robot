@@ -31,7 +31,12 @@ ${PRODUCTELEVEN_CART_BTN}     //div[@class='productinfo text-center']//a[@data-p
 *** Keywords ***
 AddProductOne
 
+     
+    
+   Reload Page
     Clear Element Text    ${PRODUCT_SEARCHBAR}
+    sleep    2s
+    Reload Page
     Input Text    ${PRODUCT_SEARCHBAR}    ${productone}
     Click Element   ${PRODUCTONE_CART_BTN}  
     Wait Until Element Is Visible    ${CONTINUE_SHOPPING_BUTTON}
