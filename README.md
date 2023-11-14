@@ -9,3 +9,5 @@
 3. Page object model
 4. logs
 5. pre condition and post condition (setup and tear down)
+6. Generic reusable method
+7. Screenshots
