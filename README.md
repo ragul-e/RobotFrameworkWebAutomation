@@ -7,3 +7,4 @@
 1. Data Driven Testing
 2. Retry Mechanism for failed test case
 3. Page object model
+4. logs
