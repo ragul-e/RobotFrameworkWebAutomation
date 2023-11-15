@@ -1,6 +1,6 @@
 # Robot-Framework-Web-Automation
 
-# You can view the report [here](https://ragul-e.github.io/RobotFrameworkWebAutomation/)
+# You can view the Test report [here](https://ragul-e.github.io/RobotFrameworkWebAutomation/)
 
 # Topics implemented in framework
 
